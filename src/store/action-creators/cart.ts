@@ -34,20 +34,16 @@ export const removeFromCart = (product: Product): CartAction => {
 }
 
 export const getFromLocalStorage = (): CartAction | undefined => {
-  // try {
-    const cartProducts = localStorage.getItem('cartProducts');
-    if (typeof cartProducts === 'string') {
-      return {
-        type: CartActionTypes.GET_FROM_LOCAL_STORAGE,
-        payload: JSON.parse(cartProducts)
-      }
-    } else {
-      return {
-        type: CartActionTypes.GET_FROM_LOCAL_STORAGE,
-        payload: []
-      }
+  const cartProducts = localStorage.getItem('cartProducts');
+  if (typeof cartProducts === 'string') {
+    return {
+      type: CartActionTypes.GET_FROM_LOCAL_STORAGE,
+      payload: JSON.parse(cartProducts)
     }
-  // } catch (e) {
-    // console.error(e);
-  // }
+  } else {
+    return {
+      type: CartActionTypes.GET_FROM_LOCAL_STORAGE,
+      payload: []
+    }
+  }
 }

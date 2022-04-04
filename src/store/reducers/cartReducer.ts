@@ -14,7 +14,6 @@ export const cartReducer = (state = initialState, action: CartAction): CartState
       }
     case CartActionTypes.REMOVE_FROM_CART:
       const newCartProducts = state.cartProducts.filter(product => product.id !== action.payload.id);
-      console.log('in reducer:', newCartProducts);
       return {
         cartProducts: newCartProducts,
         amount: state.amount - 1
