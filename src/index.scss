@@ -1,0 +1,50 @@
+@use './components/Header/Header.scss';
+@use './components/Card/Card.scss';
+@use './components/Cards/Cards.scss';
+@use './components/Cart/Cart.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  padding: 13px 10px;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 10px;
+  background-color: transparent;
+  &:hover {
+    background-color: rgb(242, 242, 242);
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 30px;
+  @media (max-width: 500px) {
+    margin-top: 30px;
+    font-size: 25px;
+  }
+  @media (max-width: 400px) {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
